@@ -69,6 +69,8 @@ body {
     -webkit-box-shadow: 4px 4px 17px 1px rgba(4, 4, 4, 1);
     -moz-box-shadow: 4px 4px 17px 1px rgba(4, 4, 4, 1);
     box-shadow: 4px 4px 17px 1px rgba(4, 4, 4, 1);
+    position: relative;
+    border: 2px dashed rgba(255, 255, 255, 0.7);
 }
 
 .gallery-item img {
@@ -76,6 +78,8 @@ body {
     height: 150px;
     object-fit: cover; /* Dopasowanie obrazu w kontenerze */
     border-radius: 4px;
+    margin-top: 6px;
+    
 }
 
 .gallery-item p 
@@ -96,6 +100,34 @@ h1 {
 
     
 }
+
+
+.gallery-item {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .heart2 {
+    z-index: 9999;
+    --c: red;
+    position: absolute;
+    bottom: 40px; /* Możesz dostosować */
+    left: 7px; /* Możesz dostosować */
+    width: 50px; /* Możesz dostosować wielkość serca */
+    aspect-ratio: 1;
+    transform: rotate(0deg);
+    scale: 0.8;
+    background:
+      /* 1 */ radial-gradient(circle at 60% 65%, var(--c) 64%, #0000 65%) top left/50% 50%,
+      /* 2 */ radial-gradient(circle at 40% 65%, var(--c) 64%, #0000 65%) top right/50% 50%,
+      /* 3 */ conic-gradient(from -45deg at 50% 85.5%, var(--c) 90deg, #0000 0) bottom/100% 50%;
+    background-repeat: no-repeat;
+  }
+  
+
+
+
 
 #heart
 {

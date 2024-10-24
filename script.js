@@ -20,12 +20,17 @@ function createGallery() {
             const galleryItem = document.createElement('div'); // Utwórz nowy element dla zdjęcia
             galleryItem.classList.add('gallery-item');
 
+            const serce = document.createElement('div'); // Utwórz nowy element dla zdjęcia
+            serce.classList.add('heart2');
+
             const imgElement = document.createElement('img'); // Utwórz element obrazu
             imgElement.src = img.src; // Ustaw źródło obrazu
             imgElement.alt = `Zdjęcie ${imagesCount}`; // Ustaw tekst alternatywny
 
             const dateLabel = document.createElement('p'); // Utwórz element tekstowy dla daty
             dateLabel.textContent = formattedDate; // Ustaw tekst daty
+
+            galleryItem.appendChild(serce); // Dodaj obraz do elementu galerii
 
             galleryItem.appendChild(imgElement); // Dodaj obraz do elementu galerii
             galleryItem.appendChild(dateLabel); // Dodaj datę do elementu galerii
